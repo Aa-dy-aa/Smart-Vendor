@@ -35,3 +35,4 @@ const MidSection = () => {
 };
 
 export default MidSection;
+

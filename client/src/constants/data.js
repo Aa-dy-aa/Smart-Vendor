@@ -8,6 +8,9 @@ import electronics from '../images/electronics.png';
 import appliances from '../images/fan.png';
 import beauty from '../images/toys.png';
 import supermarket from '../images/supermarket.jpg';
+import deal1 from '../images/Deal1.webp';
+import care from '../images/care.jpg';
+import deal3 from '../images/deal3.png';
 
 export const navData = [
     { url: topOffers, text: 'Top Offers' },
@@ -26,8 +29,8 @@ export const bannerData = [
     { id: 4, url: supermarket}
 ]
 export const imageURL = [
-    'https://rukminim1.flixcart.com/flap/960/960/image/2f30db9425df5cec.jpg?q=50',
-    'https://rukminim1.flixcart.com/flap/960/960/image/084789479074d2b2.jpg',
-    'https://rukminim1.flixcart.com/flap/960/960/image/1ce0c4c1fb501b45.jpg?q=50'
+    deal1,
+    care,
+    deal3
 ];
 
