@@ -64,13 +64,18 @@ app.get("/payment/:paymentId",async(req,res)=>{
     }
 })
 
-const PORT= 8000;
+const PORT= process.env.PORT || 8000;
 
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
 
+const URL= process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.90jer.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
-Connection(USERNAME, PASSWORD);
+Connection(URL);
+
+if(process.env.Node_env==='production'){
+    app.use(express.static('client/build'))
+}
 
 app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
 
